@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp raspbian/2013-07-26-wheezy-raspbian.img  virtual\ machine/raspbian.img
+cp raspbian/2013-07-26-wheezy-raspbian.mod.img  virtual\ machine/raspbian.img &
 
 cd virtual\ machine
 
