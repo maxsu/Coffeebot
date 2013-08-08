@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/maxsu/coffeebot.png)](https://waffle.io/maxsu/coffeebot)  
 Coffeebot
 =========
 
