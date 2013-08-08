@@ -3,7 +3,7 @@ Coffeebot
 
 A coffee server built on Raspberry Pi. 
 
-The idea is to run a small webserver that allows a user to log into their coffee machine and tell it
+The idea is to run a small webserver that allows a user to use the internet to tell their coffee machine,
 
 ```Make me some Coffee, Please.```
 
