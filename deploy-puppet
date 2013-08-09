@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## This script will deploy puppet and its dependencies in a debian environment
+## Must run as root
+
+apt-get update
+apt-get install puppet puppetmaster facter rubygems
+gem install puppet-module
