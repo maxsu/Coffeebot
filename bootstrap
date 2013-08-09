@@ -1,0 +1,28 @@
+## Boostrap code
+
+
+# We want to work in $home
+cd 
+
+# First update the Apt repo
+sudo apt-get update
+
+# Then get Git
+sudo apt-get install git
+
+# We can then clone the project
+mkdir project
+cd project
+git clone https://github.com/maxsu/Coffeebot
+cd Coffeebot
+
+
+# Run the puppet install code
+sudo ./deploy-puppet
+
+# And then the wordpress install code
+sudo ./deploy-wordpress
+
+
+#Ta...da? Test the results:
+## [TODO] write final test code here
