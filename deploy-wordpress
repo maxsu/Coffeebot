@@ -1,0 +1,8 @@
+#!/bin/bash
+
+(( UID )) && { echo >&2 "Permission denied. Are you root?"; exit 1 }
+
+
+cd /etc/puppet/modules
+
+puppet-module install jonhadfield/wordpress
