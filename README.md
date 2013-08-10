@@ -39,7 +39,7 @@ For a top level view of the project tasks check out the project [Kanban](https:/
 git init https://github.com/maxsu/Coffeebot && cd Coffeebot
 
 # Get the Raspbian image ans provision the VM:
-./rasbpian-get
+./rasbpian-get && sudo ./vm-provision
 
 # Tada! Start your VM:
 echo "take the red pill" && ./vm-up
