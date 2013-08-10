@@ -24,12 +24,11 @@ For a top level view of the project tasks check out the project [Kanban](https:/
 
 ##### OS X (Untested!)
 
-1. Download and install XCode: https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12
-2. Download and install Ports: http://www.macports.org/install.php
-3. Install Qemu and Git
-   ```sudo port -v selfupdate
-      sudo port install git
-      sudo port install qemu +target_arm```
+1. Download and install [XCode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [Macports](http://www.macports.org/install.php).
+2. Install Qemu and Git
+
+```sudo port -v selfupdate
+      sudo port install git qemu +target_arm```
 
 
 #### Onwards!
