@@ -12,6 +12,8 @@ For now the project consists of Lindsey, Billy, and myself.
 
 For a top level view of the project tasks check out the project [Kanban](https://waffle.io/maxsu/coffeebot). [![Stories in Ready](https://badge.waffle.io/maxsu/coffeebot.png)](http://waffle.io/maxsu/coffeebot) 
 
+--------------------
+====================
 
 ### Installing The VM
 
