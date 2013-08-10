@@ -19,8 +19,9 @@ For a top level view of the project tasks check out the project [Kanban](https:/
 
 ##### Linux
 
-1. Make sure you've got qemu and git. In debian, this is
-   ``` sudo apt-get update && apt-get install git qemu qemu-system ```
+1. Make sure you've got qemu and git. In debian/ubuntu, this is:
+
+```sudo apt-get update && apt-get install git qemu qemu-system```
 
 ##### OS X (Untested!)
 
