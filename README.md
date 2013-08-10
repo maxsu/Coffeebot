@@ -32,30 +32,24 @@ For a top level view of the project tasks check out the project [Kanban](https:/
       sudo port install qemu +target_arm```
 
 
-##### Windows
-
-Coffee drinkers are too efficient to use windows. Clearly.
-
 #### Onwards!
 
-1. Get the project.
-   ``` git init https://github.com/maxsu/Coffeebot && cd Coffeebot```
+```
+#Get the project.
+git init https://github.com/maxsu/Coffeebot && cd Coffeebot
 
-2. Get the Raspbian image:
-   ``` ./rasbpi-get ```
-   - The image can be installed onto the physical Pi as well.
-   - It lives in the ./raspbian subdirectory.
-   
-3. Provision the VM:
-   ``` sudo ./vm-provision-hard ```
+# Get the Raspbian image ans provision the VM:
+./rasbpian-get
 
-4. Tada! Start your VM:
-   ```echo "take the red pill" && ./vm-up ```
+# Tada! Start your VM:
+echo "take the red pill" && ./vm-up
+```
 
 #### Inside your VM
 
 1. Run the manual provisioner
-   ``` cd ~/project/Coffeebot && vm-provision ```
+
+``` cd ~/project/Coffeebot && vm-provision ```
 
 
 
