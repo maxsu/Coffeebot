@@ -14,7 +14,6 @@ For a top level view of the project tasks check out the project [Kanban](https:/
 
 --------------------
 ====================
-~~~~~~~~~~~~~~~~~~~~
 
 
 ### Installing The VM
