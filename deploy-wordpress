@@ -1,8 +1,14 @@
 #!/bin/bash
 
-(( UID )) && { echo >&2 "Permission denied. Are you root?"; exit 1 }
-
+(( UID )) && { echo >&2 "Permission denied. Are you root?"; exit 1; }
 
 cd /etc/puppet/modules
 
 puppet-module install jonhadfield/wordpress
+
+
+## [TODO] edit /etc/puppet/manifests/site.pp and add the following lines,
+## where `hostname` is output of hostname on the system and 
+## `domain.com` is the suffix for fully qualified domain names on the network:
+
+#  node '`hostname`.`domain.com`' { include wordpress }
