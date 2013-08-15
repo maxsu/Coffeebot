@@ -2,6 +2,6 @@
 
 cd  vm
 
-qemu-system-arm -kernel kernel-qemu -cpu arm1176 -m 256 -M \
+qemu-system-arm -kernel kernel -cpu arm1176 -m 256 -M \
 versatilepb -no-reboot -serial stdio -append "root=/dev/sda2 panic=1" \
- -hda raspbian.img
+ -hda vm.img -redir tcp:5022::22 -rtc base="localtime"

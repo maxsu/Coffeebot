@@ -35,20 +35,30 @@ For a top level view of the project tasks check out the project [Kanban](https:/
 #### Onwards!
 
 ```
-#Get the project.
+#Get the project:
 git init https://github.com/maxsu/Coffeebot && cd Coffeebot
 
-# Get the Raspbian image ans provision the VM:
-./rasbpian-get
+# Get the Raspbian image and initialize the VM:
+./vm-get && ./vm-init
 
 # Tada! Start your VM:
-echo "take the red pill" && ./vm-up
+echo "Now taking the Red Pill" && ./vm-up
 ```
+
+Note: The provisioning step will require root priviledges. We need
+to mount the image and edit some of its configurations.
+A cross platform alternative would be welcome here.
 
 #### Inside your VM
 
-1. Run the manual provisioner
+0. On the first startup, skip the raspi-config menu.
 
+1. Login with the following user/pass
+```
+pi / raspberry
+```
+
+2. [TODO] Write about provissioner code
 ``` cd ~/project/Coffeebot && vm-provision ```
 
 

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+mkdir  raspbian
+cd raspbian
+
+echo Downloading Raspbian Image
+wget -O raspbian.zip http://files.velocix.com/c1410/images/raspbian/2013-07-26-wheezy-raspbian/2013-07-26-wheezy-raspbian.zip
+wget -O kernel       http://xecdesign.com/downloads/linux-qemu/kernel-qemu
+echo DONE
+
+# [TODO] Check zip against SHA-1: f072b87a8a832004973db4f5e1edb863ed27507b

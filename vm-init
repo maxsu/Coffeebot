@@ -1,0 +1,47 @@
+#!/bin/bash
+
+
+read -p "WARNING!! This will overwrite any existing Coffeebot VM. Continue (Y/n)?" choice
+case "$choice" in 
+  Y ) echo "Initializing VM";;
+  * ) echo "Abort"; exit 1;;
+esac
+
+
+if [ ! -d vm ] ; then
+  mkdir vm
+fi
+
+if [ ! -d vm/mnt ] ; then
+  mkdir vm/mnt
+fi
+
+echo Unpacking VM Image and Kernel
+unzip -d vm -o raspbian/raspbian.zip
+mv vm/2013-07-26-wheezy-raspbian.img vm/vm.img
+cp raspbian/kernel vm/kernel
+
+echo DONE
+
+
+echo Modifying Image. We'll need root here.
+
+#### The following lines require administrative priviledge
+#### to mount and edit the image. A better option would be
+#### welcome.
+
+# Mount the image in a temporary directory
+sudo mount vm/vm.img -o offset=62914560 vm/mnt # [TODO] Derive offset from image properties (awk [...] $(file vm.img))
+
+# Modify the config files as needed
+sudo ex -sc '%s/^[^#].*/#&/g|x'                          vm/mnt/etc/ld.so.preload     # Comment preload line
+sudo ex -sc '%s/XKBLAYOUT="gb"/XKBLAYOUT="us"/g|x'       vm/mnt/etc/default/keyboard  # Set US keyboard layout
+sudo ex -sc "%s/.*/$(date -u '+%Y-%m-%d %H:%M:%S')/g|x"  vm/mnt/etc/fake-hwclock.data # Update hardware clock
+
+# Unmount the image
+sudo umount vm/mnt
+
+# Resize the VM image
+qemu-img resize vm/vm.img  +1G
+
+echo DONE

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-cp raspbian/2013-07-26-wheezy-raspbian.mod.img  vm/raspbian.img &
-
-cd vm
-
-wget http://xecdesign.com/downloads/linux-qemu/kernel-qemu
-
-
