@@ -7,63 +7,70 @@ The idea is to run a small webserver that allows a user to use the internet to t
 
 ```Make me some Coffee, Please.```
 
-#### Contributing to the Project
-For now the project consists of Lindsey, Billy, and myself.
-
 For a top level view of the project tasks check out the project [Kanban](https://waffle.io/maxsu/coffeebot). [![Stories in Ready](https://badge.waffle.io/maxsu/coffeebot.png)](http://waffle.io/maxsu/coffeebot) 
 
 --------------------
 ====================
 
 
-### Installing The VM
+### The VM
+To test the coffebot server features, we've got a Qemu VM that runs a Raspberry Pi operating system.
+VM configuration code should work for the physical device.
 
-#### OS Specific Prerequisites
+#### Install
+We've got a couple prereqs to fetch
 
-##### Linux
+##### Linux 
 
 1. Make sure you've got qemu and git. In debian/ubuntu, this is:
 
-```sudo apt-get update && apt-get install git qemu qemu-system```
+```
+sudo apt-get install git qemu qemu-system
+```
 
-##### OS X (Untested!)
+##### Os X
 
-1. Download and install [XCode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [Macports](http://www.macports.org/install.php).
-2. Install Qemu and Git
-
-```sudo port -v selfupdate
-      sudo port install git qemu +target_arm```
-
-
-#### Onwards!
+1. Get [XCode](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12) and [Macports](http://www.macports.org/install.php).
+2. Get Qemu and Git:
 
 ```
-#Get the project:
+sudo port install git qemu +target_arm
+```
+
+##### General install
+We'll just grab the project and run the setup script
+```
 git init https://github.com/maxsu/Coffeebot && cd Coffeebot
-
-# Get the Raspbian image and initialize the VM:
 ./vm-get && ./vm-init
-
-# Tada! Start your VM:
-echo "Now taking the Red Pill" && ./vm-up
 ```
 
 Note: The provisioning step will require root priviledges. We need
 to mount the image and edit some of its configurations.
 A cross platform alternative would be welcome here.
 
-#### Inside your VM
+#### Working with the VM
 
-0. On the first startup, skip the raspi-config menu.
+##### Start & Stopping
+To start the vm, use ```./vm-up```. On the first run, ignore the `raspi-config` menu.
+On subsequent runs, login with the ```pi``` user and password ```raspberry```.
 
-1. Login with the following user/pass
-```
-pi / raspberry
-```
+To do a hard shutdown of the machine, you may do ```Ctrl-C``` inside the original terminal window.
+For a soft shutdown, run ```sudo shutdown -s now``` inside the machine.
 
-2. [TODO] Write about provissioner code
-``` cd ~/project/Coffeebot && vm-provision ```
+If you screw up the machine, you can kill the machine, then run ```./vm-init``` again to get a fresh machine.
+This will completely erase the old machine.
 
+##### Admin Work
+Aside from that, the machine will behave as a regular, albeit some what slow, Debian machine.
+ou can install packages with ```sudo apt-get update && sudo apt-get install [PACKAGE NAMES]```
+
+##### Server work
+
+#### [TODO] 
+* Give the VM its own IP address or localhost port
+* Expand the img to ~3GB
+* Preload the img with Coffeebot provisioner code
+* Write provisioner code for WP or other (relatively) low overhead page framework
 
 
 
