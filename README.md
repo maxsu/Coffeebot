@@ -49,6 +49,7 @@ to mount the image and edit some of its configurations.
 An alternative that does not need root to edit the contents of the image would be welcome here.
 
 #### Working with the VM
+For now the VM doesn't do much on its own "out of the box".
 
 ##### Start & Stopping
 To start the vm, use ```./vm-up```. On the first run, ignore the `raspi-config` menu.
@@ -64,14 +65,6 @@ This will completely erase the old machine.
 ##### Admin Work
 Aside from that, the machine will behave as a regular, albeit some what slow, Debian machine.
 You can for example install packages with ```sudo apt-get update && sudo apt-get install [PACKAGE NAMES]```.
-
-##### Server work
-
-#### [TODO] 
-* Give the VM its own IP address or localhost port
-* Expand the img to ~3GB
-* Preload the img with Coffeebot provisioner code
-* Write provisioner code for WP or other (relatively) low overhead page framework
 
 
 
