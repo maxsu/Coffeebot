@@ -46,7 +46,7 @@ git init https://github.com/maxsu/Coffeebot && cd Coffeebot
 
 Note: The provisioning step will require root priviledges. We need
 to mount the image and edit some of its configurations.
-A cross platform alternative would be welcome here.
+An alternative that does not need root to edit the contents of the image would be welcome here.
 
 #### Working with the VM
 
