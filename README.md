@@ -55,7 +55,8 @@ To start the vm, use ```./vm-up```. On the first run, ignore the `raspi-config` 
 On subsequent runs, login with the ```pi``` user and password ```raspberry```.
 
 To do a hard shutdown of the machine, you may do ```Ctrl-C``` inside the original terminal window.
-For a soft shutdown, run ```sudo shutdown -s now``` inside the machine.
+This is equivalent to pulling the plug on a physcial Pi.
+For a soft shutdown, run ```sudo shutdown -h now``` inside the machine.
 
 If you screw up the machine, you can kill the machine, then run ```./vm-init``` again to get a fresh machine.
 This will completely erase the old machine.
