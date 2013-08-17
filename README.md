@@ -7,7 +7,7 @@ The idea is to run a small webserver that allows a user to use the internet to t
 
 ```Make me some Coffee, Please.```
 
-For a top level view of the project tasks check out the project [Kanban](https://waffle.io/maxsu/coffeebot). [![Stories in Ready](https://badge.waffle.io/maxsu/coffeebot.png)](http://waffle.io/maxsu/coffeebot) 
+For a top level view of the project tasks check out the project's issues [Kanban](https://waffle.io/maxsu/coffeebot). [![Stories in Ready](https://badge.waffle.io/maxsu/coffeebot.png)](http://waffle.io/maxsu/coffeebot) 
 
 --------------------
 ====================
@@ -62,7 +62,7 @@ This will completely erase the old machine.
 
 ##### Admin Work
 Aside from that, the machine will behave as a regular, albeit some what slow, Debian machine.
-ou can install packages with ```sudo apt-get update && sudo apt-get install [PACKAGE NAMES]```
+You can for example install packages with ```sudo apt-get update && sudo apt-get install [PACKAGE NAMES]```.
 
 ##### Server work
 
