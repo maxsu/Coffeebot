@@ -38,15 +38,18 @@ sudo port install git qemu +target_arm
 ```
 
 ##### General install
-We'll just grab the project and run the setup script
+
+Note: The init step requires root priviledges. We need to mount the image and edit some of its contents.
+Please review the`vm-init` lines that start with `sudo` if you need to make sure things are legit.
+An alternative that does not need root to edit the contents of the image would be welcome here. 
+
+
+We simply grab the project and run the setup script
 ```
 git init https://github.com/maxsu/Coffeebot && cd Coffeebot
 ./vm-get && ./vm-init
 ```
 
-Note: The provisioning step will require root priviledges. We need
-to mount the image and edit some of its configurations.
-An alternative that does not need root to edit the contents of the image would be welcome here.
 
 #### Working with the VM
 For now the VM doesn't do much on its own "out of the box".
