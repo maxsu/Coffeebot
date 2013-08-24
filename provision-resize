@@ -1,0 +1,17 @@
+read -p "WARNING!! This should only ever be run _INSIDE_ the VM. Continue (Y/n)?" choice
+case "$choice" in 
+  Y ) echo "Initializing VM Resize";;
+  * ) echo "Abort"; exit 1;;
+esac
+
+if [ -f /usr/bin/raspi-config ] ; then
+  echo "Running Inside PI"
+else
+  echo "Not running in a PI" &>2
+  exit 1
+fi
+
+
+sed -i -e 's:mmcblk0p\([0-9]\):sda\1:g' -e 's:mmcblk0:sda:g' /etc/fstab /usr/bin/raspi-config
+
+echo "You can now use raspi-resize to resize the VM."
