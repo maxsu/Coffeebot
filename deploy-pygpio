@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+wget http://raspberry-gpio-python.googlecode.com/files/RPi.GPIO-0.4.1a.tar.gz
+tar zxvf RPi.GPIO-0.4.1a.tar.gz
+cd RPi.GPIO-0.4.1a
+sudo python setup.py install
